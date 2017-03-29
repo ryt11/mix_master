@@ -1,0 +1,9 @@
+<h1>Songs for <%=@songs.first.artist.name%></h1>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li><%=song.title%> <button type="button" name="button"><%= link_to "Delete Song", song_path(song), method: :delete %>
+    </button>
+</li>
+  <%end%>
+</ul>
